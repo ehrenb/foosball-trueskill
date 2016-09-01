@@ -3,7 +3,7 @@ services:
   db:
     image: tjshake/foosball-mysql:5.7
     volumes:
-      - "/data/foosballdb:/var/lib/mysql"
+      - "./.data/foosballdb:/var/lib/mysql"
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: foosball
