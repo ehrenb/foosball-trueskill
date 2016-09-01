@@ -1,0 +1,12 @@
+version: '2'
+services:
+  db:
+    image: tjshake/foosball-mysql:5.7
+    volumes:
+      - "/data/foosballdb:/var/lib/mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: foosball
+      MYSQL_DATABASE: foosball
+      MYSQL_USER: foosball
+      MYSQL_PASSWORD: foosball
