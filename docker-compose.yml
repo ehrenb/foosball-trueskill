@@ -1,7 +1,17 @@
 version: '2'
 services:
+  flask:
+    image: tjshake/foosball-flask
+    depends_on:
+      - db
+    ports:
+      - "11111:11111"
+    links:
+      - db
+    restart: always
+
   db:
-    image: tjshake/foosball-mysql:5.7
+    image: tjshake/foosball-mysql
     volumes:
       - "./.data/foosballdb:/var/lib/mysql"
     restart: always
