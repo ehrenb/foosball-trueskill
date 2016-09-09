@@ -15,6 +15,9 @@ services:
     volumes:
       - "./.data/foosballdb:/var/lib/mysql"
     restart: always
+    hostname: foosballmysql
+    ports:
+    - 3306
     environment:
       MYSQL_ROOT_PASSWORD: foosball
       MYSQL_DATABASE: foosball
